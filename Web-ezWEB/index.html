@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>File Download Page</title>
+</head>
+<body>
+    <h3>File Download</h3>
+    <p>Enter the file name you want to download:</p>
+    
+    <!-- 文件名输入框 -->
+    <input type="text" id="fileName" placeholder="Enter file name">
+    
+    <!-- 下载按钮 -->
+    <button onclick="downloadFile()">Download</button>
+
+    <p>hint.txt等待你的下载</p>
+    <script>
+        function downloadFile() {
+            // 获取输入框中的文件名
+            var fileName = document.getElementById("fileName").value;
+
+            // 构建下载链接
+            var downloadLink = "/index?filename=" + fileName; // 替换为实际的下载路径
+
+            // 跳转到下载链接
+            window.location.href = downloadLink;
+        }
+    </script>
+
+
+</body></html>
